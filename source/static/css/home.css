@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1B2A41;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        .content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content h1 {
+            color: #FFFFFF;
+            font-size: 45px;
+            font-weight: 600;
+            margin-bottom: 90px;
+        }
+
+        .content .name {
+            color: #6aadcd;
+            text-align: center;
+        }
+
+        .chart-container {
+            width: 1000px;
+            max-width: 800px;
+            background-color: #1B2A41;
+            padding: 20px;
+            height: 650px;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.9) 0px 4px 8px;
+            position: relative;
+        }
+
+        .chart-container .result-text {
+            text-align: left;
+            color: #FFFFFF; /* Cor opcional para melhor visualização */
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .chart-container .result-value {
+            text-align: left;
+            color: #FFFFFF;
+            font-size: 30px;
+            font-weight: bold;
+            color: #6aadcd;
+        }
+        .chart-container .hr-result {
+            opacity: 0.5;
+            color: white;
+        }
+
+
+        .chart-container .user-dashboard {
+            text-align: left;
+            font-size: 30px;
+            font-weight: bold;
+            color: #6aadcd;
+            padding-right: 10px;
+        }
+        
+        .user-info {
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+            align-items: left;
+        }
+        
+        .user-id,
+        .user-status {
+            font-weight: normal;
+            font-size: 16px;
+            color: #888888; /* Ajuste de cor para o ID do usuário e o status */
+            margin-right: 10px;
+        }
+
+        #user-icon {
+            color: #FFFFFF;
+            padding-right: 3px;
+        }
+
+        .dividor-infos {
+            color: #FFFFFF;
+        }
+
+
+        .calendar-container {
+            display: inline-block;
+            position: relative;
+            margin-left: auto;
+        }
+        
+        #date-picker {
+            width: 110px;
+            font-size: 16px;
+            border-radius: 8px;
+            background-color: #1B2A41;
+            box-shadow: rgba(0, 0, 0, 0.9) 0px 2px 4px;
+            color: #6aadcd;
+            font-weight: bold;
+            border: 1px solid #ccc;
+        }
