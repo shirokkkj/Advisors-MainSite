@@ -1,18 +1,11 @@
-body {
-    background-color: #253645;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
 .main-container {
-    width: 100%;
+    margin-left: 260px; /* Espaço para o menu lateral */
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Alinhar itens verticalmente */
-    justify-content: flex-start; /* Alinhar itens ao início */
-    align-items: center; /* Centralizar itens horizontalmente */
-    padding-top: 20px; /* Espaçamento no topo */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
 }
 
 .main-container .form-title {
@@ -25,39 +18,61 @@ body {
 
 .main-container .box-table {
     display: flex;
-    flex-direction: column; /* Colocar itens em coluna */
-    align-items: center; /* Centralizar horizontalmente */
-    width: 100%;
-    height: calc(100vh - 60px); /* Ajustar altura para o espaço restante */
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 260px); /* Ajusta para o espaço do menu lateral */
+    height: calc(100vh - 60px);
 }
 
 .main-container .box-table .form-title {
     font-size: 40px;
-    color: #6aadcd; /* Cor do título do formulário */
-    margin-bottom: 10px; /* Espaçamento entre o título e o formulário */
+    color: #6aadcd;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
 .main-container .box-table .form-to.register {
     background-color: red;
-    margin-bottom: auto; /* Empurrar o formulário para o topo */
+    margin-bottom: auto;
     margin-bottom: 50px;
 }
 
 .main-container .box-table .table-container {
     display: flex;
-    flex-direction: column; /* Alinhar itens verticalmente */
-    justify-content: flex-start; /* Manter o conteúdo no topo */
-    align-items: center; /* Centralizar tabela horizontalmente */
-    padding: 20px; /* Espaçamento interno */
-    background: #6aadcd; /* Cor de fundo */
-    border-radius: 15px; /* Bordas arredondadas */
-    width: 40%; /* Ocupa toda a largura do contêiner pai */
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-    box-sizing: border-box; /* Inclui padding e borda na altura total */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background: #6aadcd;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    overflow-y: auto;
+    box-sizing: border-box;
     margin-top: 40px;
     box-shadow: 0px 30px 40px #00000056;
 }
 
+/* Media Queries */
 
+/* Tablet e telas pequenas */
+@media (max-width: 1024px) {
+    .main-container {
+        margin-left: 200px; /* Ajusta para o menu lateral */
+    }
 
+    .main-container .box-table {
+        width: calc(100% - 200px); /* Ajusta para o espaço do menu lateral */
+    }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+    .main-container {
+        margin-left: 0; /* Remove o espaço do menu lateral */
+    }
+
+    .main-container .box-table {
+        width: 100%;
+    }
+}

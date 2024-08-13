@@ -1,0 +1,17 @@
+<link rel="stylesheet" href=" {{url_for('static', filename='css/form.css')}} ">
+
+<form 
+     action="{{url_for('sealler.seal')}}" 
+        method="POST">    
+    {{ form.hidden_tag() }}
+        <div class="mb-3">                   
+                <label for="email" class="form-label">{{ form.investment.label }}</label {%if user%}value='{{user.name}}'{%endif%}>
+                {{ form.investment(class="form-control", id="invesment", placeholder="Investimento")}}
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">{{ form.date.label }}</label {%if user%}value='{{user.password}}'{%endif%}>
+            {{ form.date(class="form-control", id="date", placeholder='00/00')}}
+        </div>
+        {{form.submit_vendas(class='submit-register')}}
+</form>

@@ -33,11 +33,10 @@
     <div class="main-login">
             <div class="left-login">
 
-                <img src=" {{url_for('static', filename='anim.svg')}} " alt="">
+                <img src="{{url_for('static', filename='anim.svg')}}" alt="">
             </div>
             <div class="right-login">
                 <div class="cartao-login">
-                    <img src="{{url_for('static', filename='logo.PNG')}}" alt="">
                     <h2>LOGIN</h2>
                     <form method="POST", action="login">
                         {{ form.hidden_tag() }}

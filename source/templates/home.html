@@ -20,14 +20,17 @@
     
     <div class="chart-container">
         <div class="user-dashboard">
+            <form action="home" method="POST">
+                <input type="text" id="date-picker" name="date" placeholder="Selecione a data" required>
+                <button type="submit" class="button-invite-date" method='POST'>Send</button>
+            </form>
             <i class='bx bxs-user-check' id="user-icon"></i>
             {{cookie_name}}
             <div class="user-info">
                 <span class="user-id"> {%if cookie_password == 'masterloginpassword'%} <strong>master</strong> {%else%} {{user_id}} {%endif%} </span>
                 <span class="user-status">0</span>  
                 <div class="calendar-container">
-                    <!-- Campo de entrada do calendário -->
-                    <input type="text" id="date-picker" value="2024" name="dates">
+                    <!-- Formulário para enviar a data -->
                 </div>
         </div>
         <hr class="dividor-infos">
@@ -116,7 +119,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             flatpickr("#date-picker", {
                 dateFormat: "d/m/Y",
-                defaultDate: "{{ default_date }}"
+                defaultDate: "01/01/2024",
+                mode: "multiple",           // Permite selecionar múltiplas datas
+                maxDate: '31/12/2024'                  // Limita a seleção a 5 datas
             });
         });
     </script>

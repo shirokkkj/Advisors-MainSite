@@ -9,3 +9,9 @@ class Users(db.Model):
     
     def __repr__(self):
         return f'{self.name}, {self.password}, {self.date}'
+    
+    
+class Investments(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    investment = db.Column(db.Float, nullable=False, unique=False)
+    date = db.Column(db.DateTime)

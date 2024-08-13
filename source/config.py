@@ -18,6 +18,8 @@ def create_app():
     from another_routes.table import table_route
     from another_routes.form_products import form_register
     from another_routes.navbar import nav_route
+    from another_routes.selected_data import dates_route
+    from another_routes.vendas import sealler_route
     from routes import config_routes
     
     # Importei todas as rotas e as configurei como BluePrints, e, logo depois, configurei as rotas tendo importado a função do arquivo [routes] pra manter a modularização organizada e sem aquele problema de importação circular.
@@ -25,7 +27,11 @@ def create_app():
     app.register_blueprint(form_register)
     app.register_blueprint(nav_route)
     app.register_blueprint(table_route)
+    app.register_blueprint(dates_route)
+    app.register_blueprint(sealler_route)
 
     config_routes('masterloginpassword', app)
+    with app.app_context():
+        db.create_all()
 
     return app

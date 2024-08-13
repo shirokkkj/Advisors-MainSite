@@ -7,7 +7,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #253645;
+    font-family: 'Poppins', sans-serif;
+}
 
 .side-bar {
     position: fixed;
@@ -16,10 +21,9 @@
     width: 260px;
     height: 100%;
     background: #0D1A2E;
-    padding-top: 10px;
-    padding-left: 5px;
-    box-sizing: border-box;
     padding: 6px 14px;
+    box-sizing: border-box;
+    transition: width 0.3s ease;
 }
 
 .side-bar .logo-menu {
@@ -37,9 +41,6 @@
 .side-bar .logo-menu .logo {
     font-size: 30px;
     color: #d0ddd3;
-    display: flex;
-    align-items: flex-start;
-    padding: 20px;
     font-weight: bold;
 }
 
@@ -55,11 +56,8 @@
     margin: 5px 0;
     display: flex;
     align-items: center;
-    box-sizing: border-box;
     border-radius: 8px;
-    line-height: 50px;
     background: rgba(255, 255, 255, .2);
-    border-radius: 8px;
     box-sizing: border-box;
 }
 
@@ -77,7 +75,61 @@
 .list-item i {
     margin-right: 10px;
     font-size: 20px;
-  }
+}
 
+/* Media Queries */
 
+/* Tablet e telas pequenas */
+@media (max-width: 1024px) {
+    .side-bar {
+        width: 200px; /* Reduz a largura do menu lateral */
+    }
 
+    .side-bar .logo-menu .logo {
+        font-size: 24px; /* Ajusta o tamanho da fonte do logo */
+    }
+
+    .list .list-item a {
+        font-size: 16px; /* Ajusta o tamanho da fonte dos itens da lista */
+    }
+
+    .list-item i {
+        font-size: 18px; /* Ajusta o tamanho do ícone */
+    }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+    .side-bar {
+        width: 100%;
+        height: auto;
+        position: static; /* Remove a fixação para dispositivos móveis */
+        padding: 10px;
+    }
+
+    .side-bar .logo-menu {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .side-bar .logo-menu .logo {
+        font-size: 20px; /* Ajusta o tamanho da fonte do logo */
+        padding: 10px 0; /* Ajusta o padding */
+    }
+
+    .list .list-item {
+        height: auto;
+        margin: 5px 0;
+        line-height: normal; /* Remove a altura fixa */
+    }
+
+    .list .list-item a {
+        font-size: 14px; /* Ajusta o tamanho da fonte dos itens da lista */
+        padding-left: 0; /* Remove o padding */
+    }
+
+    .list-item i {
+        font-size: 16px; /* Ajusta o tamanho do ícone */
+    }
+}
