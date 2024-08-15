@@ -17,5 +17,5 @@ def seal():
             return redirect(url_for('investments'))
         else:
             flash('Algo deu errado!')
-    
+            return redirect(url_for('investments'))
     return render_template('form_vendas.html', form=form)

@@ -5,13 +5,13 @@
         method="POST">    
     {{ form.hidden_tag() }}
         <div class="mb-3">                   
-                <label for="email" class="form-label">{{ form.investment.label }}</label {%if user%}value='{{user.name}}'{%endif%}>
+                <label for="email" class="form-label">{{ form.investment.label }}</label>
                 {{ form.investment(class="form-control", id="invesment", placeholder="Investimento")}}
         </div>
 
         <div class="mb-3">
-            <label for="password" class="form-label">{{ form.date.label }}</label {%if user%}value='{{user.password}}'{%endif%}>
-            {{ form.date(class="form-control", id="date", placeholder='00/00')}}
+            <label for="date" class="form-label">{{ form.date.label }}</label>
+            {{ form.date(class="form-control", id="date", placeholder='Date')}}
         </div>
         {{form.submit_vendas(class='submit-register')}}
 </form>

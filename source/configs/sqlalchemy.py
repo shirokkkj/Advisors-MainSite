@@ -1,6 +1,8 @@
 from config import db
 import datetime
 
+# Aqui é toda a criaão e configuração do banco de dados usando SQLAlchemy. Através deste arquivo, as colunas dentro do banco de dados usado é criado com os parâmetros passados, nesse cado, o
+
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(25), unique=True, nullable=False)

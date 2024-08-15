@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from configs.sqlalchemy import Users, db
-from form.forms import User_Register, Edit_User
+from form.forms import User_Register
 
 table_route = Blueprint('table', __name__)
 

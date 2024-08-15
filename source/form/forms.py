@@ -1,7 +1,11 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, FloatField, DateField
+from wtforms import StringField, PasswordField, SubmitField, FloatField
+from wtforms.fields import DateField
 from wtforms.validators import DataRequired
 
+
+
+# Aqui é bem simples. Eu configurei todos os formulários do site nesse arquivo, ou seja, o formulário de Login, o de Registrar Usuários e o de Vendas. Usei WTForms
 
 class Login(FlaskForm):
     name = StringField('Username', validators=[DataRequired()])
@@ -15,14 +19,10 @@ class User_Register(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     submit_register = SubmitField('Registrar')
     
-class Edit_User(FlaskForm):
-    name = StringField('Username', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    submit_edit = SubmitField('Editar')
     
 class Vendas(FlaskForm):
-   investment = FloatField('Investment', validators=[DataRequired()])
-   date = DateField('Date of Investment. 00/00', validators=[DataRequired()])
-   submit_vendas = SubmitField('Create Investment')
+    investment = FloatField('Investment', validators=[DataRequired()])
+    date = DateField('Date', format='%Y-%m-%d')
+    submit_vendas = SubmitField('Create Investment')
 
     
