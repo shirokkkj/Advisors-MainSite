@@ -31,3 +31,8 @@ O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS DE QUALQUE
 
 Também descrita em ``LICENSE`` 
 
+## ✋ Contato
+**Discord**: yuchironozora
+**Github**: shirokkkj
+
+
