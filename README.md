@@ -20,5 +20,14 @@ Este projeto não aceita contribuições externas. Se você tiver sugestões ou 
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a Licença Restritiva descrita em ``LICENSE`` 
+Este projeto está licenciado sob a Licença Restritiva: 
+Licença Restritiva
+
+Copyright (c) [2024] [Shiro - yuchironozora - Advisors]
+
+A permissão é concedida exclusivamente para uso não comercial. É estritamente proibido o uso, distribuição, cópia, modificação ou qualquer outra forma de utilização deste software para fins comerciais ou por terceiros sem a autorização expressa e por escrito do detentor dos direitos autorais.
+
+O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS DE QUALQUER TIPO, EXPRESSAS OU IMPLÍCITAS, INCLUINDO, MAS NÃO SE LIMITANDO A, GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM PROPÓSITO ESPECÍFICO E NÃO INFRAÇÃO. EM NENHUM CASO OS AUTORES OU DETENTORES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER RECLAMAÇÃO, DANO OU OUTRA RESPONSABILIDADE, SEJA EM AÇÃO DE CONTRATO, ATO ILÍCITO OU OUTRO, DECORRENTES DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTROS NEGÓCIOS NO SOFTWARE.
+
+Também descrita em ``LICENSE`` 
 
