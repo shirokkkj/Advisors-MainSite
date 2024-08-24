@@ -11,7 +11,7 @@ def seal():
     
     if request.method == 'POST':
         if form.validate_on_submit():
-            new_investment = Investments(investment=form.investment.data, date=form.date.data)
+            new_investment = Investments(name_investment=form.name_investment.data, investment=form.investment.data, date=form.date.data)
             db.session.add(new_investment)
             db.session.commit()
             return redirect(url_for('investments'))

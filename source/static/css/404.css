@@ -1,0 +1,94 @@
+/* Estilo global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #1F2733;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1F2733;
+}
+
+/* Container principal */
+.main-login {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Coluna da esquerda */
+.left-login {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #253645;
+    padding: 20px;
+    min-height: 300px;
+}
+
+.left-login img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Coluna da direita */
+.right-login {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.cartao-login {
+    text-align: center;
+    max-width: 700px;
+    border: none;
+}
+
+.cartao-login h2 {
+    color: #e74c3c;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.cartao-login p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.cartao-login a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.cartao-login a:hover {
+    color: #e74c3c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login, .right-login {
+        flex: 1;
+        width: 100%;
+        padding: 20px;
+    }
+}

@@ -4,6 +4,15 @@
      action="{{url_for('sealler.seal')}}" 
         method="POST">    
     {{ form.hidden_tag() }}
+
+
+    <div class="mb-3">                   
+        <label for="email" class="form-label">{{ form.name_investment.label }}</label>
+        {{ form.name_investment(class="form-control", id="name_investment", placeholder="Name of Investment")}}
+</div>
+
+
+
         <div class="mb-3">                   
                 <label for="email" class="form-label">{{ form.investment.label }}</label>
                 {{ form.investment(class="form-control", id="invesment", placeholder="Investimento")}}

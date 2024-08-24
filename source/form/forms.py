@@ -21,6 +21,7 @@ class User_Register(FlaskForm):
     
     
 class Vendas(FlaskForm):
+    name_investment = StringField('Name of Investment', validators=[DataRequired()])
     investment = FloatField('Investment', validators=[DataRequired()])
     date = DateField('Date', format='%Y-%m-%d')
     submit_vendas = SubmitField('Create Investment')

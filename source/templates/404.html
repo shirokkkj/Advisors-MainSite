@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/404.css')}}">
+    <title>Página não encontrada</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+
+            <img src="{{url_for('static', filename='anim.svg')}}" alt="">
+        </div>
+        <div class="right-login">
+            <div class="cartao-login">
+                <h2>Página não encontrada...</h2>
+                <p> Puxa, não conseguimos encontrar a página que você buscava! Mas que tal você ir ver os seus<a href=" {{url_for('home')}} "> investimentos recentes? </a></p>
+            </div>
+        </div>
+</div>
+</body>
+</html>

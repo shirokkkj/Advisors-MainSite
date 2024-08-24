@@ -15,5 +15,6 @@ class Users(db.Model):
     
 class Investments(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    name_investment = db.Column(db.String(150), unique=False, nullable=False)
     investment = db.Column(db.Float, nullable=False, unique=False)
     date = db.Column(db.DateTime)

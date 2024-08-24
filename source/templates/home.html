@@ -10,40 +10,108 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+    <style>
+        body {
+            background-color: #1F2733;
+        }
+    </style>
 </head>
 <body>
-    <div c-container="{{url_for('nav.nav')}}"></div>
+
+
+ <div c-container="{{url_for('nav.nav')}}">  </div>
 
     <div class="content">
-        <h1> Seja bem vindo(a) <div class="name"> {{cookie_name}} </div></h1>
+        <h1> Seja bem-vindo(a), <div class="name"> {{cookie_name}} </div></h1>
     </div>
     
     <div class="chart-container">
         <div class="user-dashboard">
-            <form action="home" method="POST">
-                <input type="text" id="date-picker" name="date" placeholder="Selecione a data" required>
-                <button type="submit" class="button-invite-date" method='POST'>Send</button>
-            </form>
-            <i class='bx bxs-user-check' id="user-icon"></i>
-            {{cookie_name}}
             <div class="user-info">
+                <i class='bx bxs-user-check' id="user-icon"></i>
                 <span class="user-id"> {%if cookie_password == 'masterloginpassword'%} <strong>master</strong> {%else%} {{user_id}} {%endif%} </span>
-                <span class="user-status">0</span>  
-                <div class="calendar-container">
-                    <!-- Formulário para enviar a data -->
-                </div>
-        </div>
-        <hr class="dividor-infos">
-        <div class="result-text">
-            Resultado
-        </div>
-        <div class="result-value">
-            R${{resultado}}
-        </div>
-        <hr class="hr-result">
-        <canvas id="myLineChart"></canvas>
-    </div>
+                <span class="user-status">#{{user_id}}</span>
 
+                <form class="form-post-data" action="home" method="POST">
+                    <button type="submit" class="button-invite-date" method='POST'> <i class='bx bx-refresh'></i>  </button>
+                    <input type="text" id="date-picker" name="date" placeholder="Selecione a data" required>
+                    
+                </form>
+                
+            </div>
+            <div class="result-text">
+                Resultado
+            </div>
+            <div class="result-value">
+                {%if resultado >= 0%}
+                    <p class="positive">R${{resultado}}</p>
+                {%else%}
+                <p class="negative">R${{resultado}}</p>
+                {%endif%}
+            </div>
+            <canvas id="myLineChart"></canvas>
+            <div class="metrics-container">
+                <div class="metrics-box">
+                    <p> {{investments_count}} </p>
+                    <span>Investimentos</span>
+                </div>
+                <div class="metrics-box">
+                    <p>0</p>
+                    <span>Operações</span>
+                </div>
+                <div class="metrics-box">
+                    <p>0</p>
+                    <span>Ordens</span>
+                </div>
+                <div class="metrics-box">
+                    <p>0</p>
+                    <span>Minicontratos</span>
+                </div>
+                <div class="metrics-box">
+                    <p>0</p>
+                    <span>Ações</span>
+                </div>
+                <div class="metrics-box">
+                    <p> {{acert_percentual}}%  </p>
+                    <span>Taxa de acerto</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Performance Box -->
+        <div class="performance-section">
+            <div class="performance-box">
+                <h5>Melhor desempenho do período</h5>
+                {%for i in range(investment_names|length)%}
+                <div class="strategy-result">
+                    {%if list_investments[i] >= 0%}
+                    <p> {{investment_names[i]}} </p>
+                    <span class="positive"> R$ {{list_investments[i]}} </span>
+                    {%else%}
+            
+                    {%endif%}
+                </div>
+
+                {%endfor%}
+            </div>
+            <div class="performance-box">
+                <h5>Pior desempenho do período</h5>
+                {%for i in range(investment_names|length)%}
+                <div class="strategy-result">
+                    {%if list_investments[i] < 0%}
+                    <p> {{investment_names[i]}} </p>
+                    <span class="negative"> R$ {{list_investments[i]}} </span>
+                    {%else%}
+            
+                    {%endif%}
+                </div>
+
+                {%endfor%}
+            </div>
+        </div>
+     </div>
+        <!-- End of Performance Box -->
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
@@ -63,7 +131,7 @@
                 label: 'Ganho',
                 data: values,
                 borderWidth: 3, // Largura da linha
-                tension: 0.0, // Suavizar a linha
+                tension: 0.1, // Suavizar a linha
                 pointRadius: 0, // Remove os pontos
                 fill: false, // Não preencher abaixo da linha
                 borderColor: 'rgba(39, 245, 86, 1)', // Cor padrão
@@ -115,13 +183,12 @@
             config
         );
 
-
         document.addEventListener('DOMContentLoaded', function() {
             flatpickr("#date-picker", {
                 dateFormat: "d/m/Y",
                 defaultDate: "01/01/2024",
-                mode: "multiple",           // Permite selecionar múltiplas datas
-                maxDate: '31/12/2024'                  // Limita a seleção a 5 datas
+                mode: "multiple", // Permite selecionar múltiplas datas
+                maxDate: '31/12/2024' // Limita a seleção a 5 datas
             });
         });
     </script>
