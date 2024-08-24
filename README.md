@@ -36,4 +36,3 @@ Também descrita em ``LICENSE``
 - **Github**: shirokkkj
 
 
->>>>>>> f6b895ec4130e7b910c8759471114da002cf72bd
