@@ -1,0 +1,86 @@
+/* Definições gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Estilo para o contêiner principal */
+.main-error {
+    text-align: center;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de erro */
+.on-top-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o parágrafo principal */
+.column-total p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilo para links */
+.column-total a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.column-total a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para a mensagem de suporte */
+.suport-end-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.left-image-suport {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.suport-end-message p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    .suport-end-message {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-image-suport {
+        margin-bottom: 10px;
+    }
+
+    .suport-end-message p {
+        font-size: 14px;
+    }
+}

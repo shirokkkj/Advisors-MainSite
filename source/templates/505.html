@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Server Error</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/505.css')}}">
+</head>
+<body>
+    <div class="main-error">
+        <div class="on-top-title">Puxa! Algo deu errado.</div>
+        <div class="column-total" >
+            <p>Puxamos os cabos do site sem querer! Você pode esperar ou... Ir ver seus <a href="{{url_for('home')}}">investimentos</a> enquanto arrumamos o problema!</p>
+            <div class="suport-end-message">
+                <img class="left-image-suport" src="{{url_for('static', filename='anim.svg')}}" alt="">
+                <p>Para mais informações: <a href="#"></a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

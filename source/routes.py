@@ -9,6 +9,8 @@ import datetime
 
 
 def config_routes(MASTER_PASSWORD, app):
+    
+    
     @app.route('/login', methods=['GET', 'POST'])
     def login():
         form = Login()

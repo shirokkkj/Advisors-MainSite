@@ -1,4 +1,4 @@
-# Advisors MainSite
+# Advisors MainSite ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 **Advisors MainSite** é uma aplicação web desenvolvida para gerenciar e exibir informações detalhadas sobre investimentos. Utilizando o framework Flask e SQLAlchemy para a persistência de dados, esta aplicação oferece uma solução eficiente e responsiva para acompanhar e gerenciar operações de investimento.
 

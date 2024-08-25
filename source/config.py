@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -30,7 +31,11 @@ def create_app():
     
     @app.errorhandler(404)
     def page_not_found(e):
-        return render_template('404.html')
+        return render_template('404.html'), 400
+    
+    @app.errorhandler(500)
+    def internal_error(e):
+        return render_template('505.html'), 500
     
     # Importei todas as rotas e as configurei como BluePrints, e, logo depois, configurei as rotas tendo importado a função do arquivo [routes] pra manter a modularização organizada e sem aquele problema de importação circular.
 
@@ -40,6 +45,7 @@ def create_app():
     app.register_blueprint(dates_route)
     app.register_blueprint(sealler_route)
     app.register_error_handler(404, page_not_found)
+    app.register_error_handler(500, internal_error)
     config_routes('masterloginpassword', app)
     
     

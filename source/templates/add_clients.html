@@ -1,5 +1,8 @@
 <link rel="stylesheet" href=" {{url_for('static', filename='css/form.css')}} ">
 
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 <form 
      action="{{ url_for('register.register') if not user else url_for('table.update_user_id', user_id=user.id) }}" 
         method="POST">
