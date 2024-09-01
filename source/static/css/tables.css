@@ -4,43 +4,68 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Estilos da Tabela */
 .content-table {
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 570px;
-    border-radius: 10px 10px;
-    overflow: hidden;
-    background-color: #6aadcd;
+    font-size: 1.2em;
+    min-width: 100%;
+    background-color: #5da2c4; /* Cor do fundo da tabela */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
+    border-radius: 8px;
 }
 
-.content-table thead th {
-    background-color: #9cd5d0;
+.content-table thead tr {
+    background-color: #57b6d9; /* Cor do cabeçalho */
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
+    border-radius: 8px;
 }
 
-.content-table th {
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    color: black;
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+    text-align: center;
+    color: #ffffff; /* Cor do texto */
 }
 
 .content-table tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
-.content-table tbody td {
-    text-align: center;
-}
-
-.content-table tbody tr:nth-of-type() {
+.content-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
 .content-table tbody tr:last-of-type {
-    border-bottom: 4px solid #6aadcd;
+    border-bottom: 2px solid #57b6d9;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #57b6d9;
+}
+
+.btn {
+    padding: 8px 12px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background-color: #e74c3c; /* Cor do botão Deletar */
+    color: #ffffff;
+    border: none;
+}
+
+.btn-success {
+    background-color: #2ecc71; /* Cor do botão Editar */
+    color: #ffffff;
+    border: none;
+}
+
+.btn-danger:hover, .btn-success:hover {
+    opacity: 0.8;
 }

@@ -1,39 +1,61 @@
-.mb-3 > input {
+/* Estilos do Formulário */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2c3e50; /* Cor de fundo da página */
+    color: #ffffff; /* Cor do texto */
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fundo do formulário */
+    color: #333333; /* Cor do texto do formulário */
     border-radius: 8px;
-    border: none;
-    background: #9dc5d0 ;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3498db; /* Cor do título */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
     padding: 10px;
-    color: #f0ffffde;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-control:focus {
     outline: none;
-    box-sizing: border-box;
-    width: 450px;
-}
-
-.mb-3 > input::placeholder {
-    color: #f0ffffde;
-    opacity: 0.7;
-}
-
-
-.mb-3 > label {
-    color: #9dc5d0;
-    margin-bottom: 10px;
+    border-color: #3498db;
 }
 
 .submit-register {
     width: 100%;
-    padding: 13px 0px;
-    margin: 25px 0;
+    padding: 10px;
+    background-color: #1abc9c; /* Cor do botão Registrar */
     border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    color: #000000;
-    background-color: #9dc5d0;
+    color: #ffffff;
+    font-size: 1.2em;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0px 10px 20px -12px #60d9fa;
+    transition: background-color 0.3s ease;
+}
 
+.submit-register:hover {
+    background-color: #16a085;
 }

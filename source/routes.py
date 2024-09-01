@@ -122,3 +122,9 @@ def config_routes(MASTER_PASSWORD, app):
         
         
         return render_template('register_investments.html')
+    
+    
+    @app.route('/force_error')
+    def force_error():
+        # Lança uma exceção para forçar um erro 500
+        return 1 / 0 
